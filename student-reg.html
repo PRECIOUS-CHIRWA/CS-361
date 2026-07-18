@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="reg.css"/>
+</head>
+<body>
+
+  <div>
+         <h1 class="page-title">Student Registration Form</h1>
+         <p class="page-subtitle">Enter Student Information</p>
+
+        <form id="RegistrationForm" action="submit">
+        
+            <legend class="form-group"> Personal Information
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required>
+
+               <label>Gender</label>
+                  <input type="radio" id="male" name="gender" value="Male" required>
+                  <label for="male">Male</label>
+                  <input type="radio" id="female" name="gender" value="Female" required>
+                  <label for="female">Female</label>
+            </legend>
+
+            <legend class="form-group"> Student Details
+             <label for="studentNo">Registration Number</label>
+              <input type="text" id="studentNo" name="studentNo" placeholder="123 4562" required>
+
+              <label for="grade">Grade</label>
+              <select id="grade" name="grade" required>
+                <option value="" disabled selected>Grade 10</option>
+                <option value="grade-8">Grade 8</option>
+                <option value="grade-9">Grade 9</option>
+                <option value="grade-10">Grade 10</option>
+                <option value="grade-11">Grade 11</option>
+                <option value="grade-12">Grade 12</option>
+              </select>
+            </legend>
+
+            <legend class="form-group"> Contact Information
+              <label for="address">Address</label>
+              <textarea id="address" name="address" placeholder="Enter student address" rols="4" cols="5" required></textarea>
+
+              <label for="parentName">Parent/Guardian Name</label>
+              <input type="text" id="parentName" name="parentName" placeholder="Enter parent/guardian name" required>
+
+              <label for="parentContact">Parent/Guardian Contact</label>
+              <input type="tel" id="parentContact" name="parentContact" placeholder="Enter contact number" required>
+            </legend>
+
+          <button type="submit" class="submit-btn">Submit Form</button>
+        </form>
+      </div>
+
+</body>
+</html>

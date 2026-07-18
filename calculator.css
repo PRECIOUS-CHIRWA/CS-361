@@ -1,0 +1,26 @@
+body{
+  background: #f0f0f0;
+}
+
+#calculator{
+  display: grid;
+  gap: 1.5rem;
+  left: 70%;
+  align-items:center;
+}
+
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+button{
+   width: 100%;
+   padding : 1.3em;
+   border-radius: 1.2rem;
+   background: green;
+   font-weight: bold;
+
+}
