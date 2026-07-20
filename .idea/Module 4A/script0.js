@@ -77,24 +77,15 @@ console.log(`Is the score between 50 and 59?` + (score >= 50 && score <= 59) ? "
 
 
 //Task 6 Grade decider
-let score0 = 97;
-
-if (score0 >= 50 && score0 <= 59) {
-    console.log("Pass");
+function decideGrade(score) {
+    if (score >= 50 && score <= 59) return "Pass";
+    else if (score >= 60 && score <= 69) return "Credit";
+    else if (score >= 70 && score <= 76) return "Merit 2";
+    else if (score >= 77 && score <= 85) return "Merit 1";
+    else if (score >= 86 && score <= 100) return "Distinction";
+    return "Fail";
 }
-else if (score0 >= 60 && score0 <= 69) {
-    console.log("Credit");
-}
-else if (score >= 70 && score <= 76) {
-    console.log("Merit 2");
-}
-else if (score >= 77 && score <= 85) {
-    console.log("Merit 1");
-}
-else if (score >= 86 && score <= 100) {
-    console.log("Distinction");
-}
-else {
-    console.log("Fail");
-}
+//test decideGrade()
+console.log(`Your grade is: ${decideGrade(86)}`);
+console.log(`Your grade is: ${decideGrade(97)}`);
 
