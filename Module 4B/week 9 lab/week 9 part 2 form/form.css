@@ -1,11 +1,12 @@
 body {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2d3748;
-    background-color: antiquewhite;
+    background-color: snow;
     padding: 2rem 1rem;
     box-sizing: border-box;
 }
@@ -118,8 +119,36 @@ body>div:first-child {
 }
 
 /* Validation Message styling */
-.validate-msg {
+.validation-msg.error {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 80px;
+    align-items: center;
     margin-top: 1rem;
-    text-align: center;
+    font-weight: 500;
+    background-color: #eccaca;
+    color: red;
+    padding: 0.8rem;
+    border-radius: 6px;
+    position: fixed;
+    z-index: 500;
+    right: 69%;
+}
+
+.validation-msg.success {
+    color: green;
+    background-color: #c1efd7;
+    padding: 0.8rem;
+    border-radius: 6px;
+    position: fixed;
+    left: 69%;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 80px;
+    align-items: center;
+    margin-top: 1rem;
     font-weight: 500;
 }
