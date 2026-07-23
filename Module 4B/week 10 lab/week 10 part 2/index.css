@@ -1,6 +1,5 @@
 body {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
@@ -14,21 +13,49 @@ body {
 main {
     display: grid;
     gap: 25px;
+    width: 100%;
+    max-width: 1000px;
 }
 
-.user-container,
 .product-container {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    justify-content: center;
-    width: 90%;
-    height: auto;
-    max-width: 1000px;
     background-color: rgb(251, 240, 227);
-    gap: 10px;
-    font-weight: 320;
-    padding: 37px 87px;
+    padding: 37px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-container>div {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.add-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #80df54;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #0da17c;
+}
+
+.cart-total {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: rgb(251, 240, 227);
+    padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
